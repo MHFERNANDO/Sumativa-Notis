@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
 
   async medir(valor: number) {
     this.valor = valor;
-    if (this.valor <= 50) {
+    if (this.valor <= 1000) {
       this.color = "--level-color: rgb(3, 3, 22);";
       this.fondo = "background-color: #111111;";
     } else {
@@ -41,7 +41,7 @@ export class HomePage implements OnInit {
   }
 
   async sendNotification(valor: number) {
-    if (valor <= 50) {
+    if (valor <= 1000) {
       await LocalNotifications.schedule({
         notifications: [
           {
@@ -51,7 +51,7 @@ export class HomePage implements OnInit {
           }
         ]
       });
-    } else if (valor > 50){
+    } else if (valor > 1000){
       await LocalNotifications.schedule({
         notifications: [
           {
