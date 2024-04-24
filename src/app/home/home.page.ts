@@ -51,11 +51,11 @@ export class HomePage implements OnInit {
           }
         ]
       });
-    } else {
+    } else if (valor > 50){
       await LocalNotifications.schedule({
         notifications: [
           {
-            title: "Es de NOCHE",
+            title: "Es de DIA",
             body: "La luz detectada en el sensor, nos indica ser de dia",
             id: 1
           }
